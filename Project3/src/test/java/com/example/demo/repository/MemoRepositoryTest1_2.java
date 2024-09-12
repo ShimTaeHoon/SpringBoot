@@ -71,7 +71,7 @@ public class MemoRepositoryTest1_2 {
 	void 정렬조건추가하기() {
 		
 		// no 필드를 기준으로 역정렬하는 조건을 생성
-		// 임포트는 맨끝에 있는 domain
+		// ★임포트는 맨끝에 있는 domain★
 		Sort sort = Sort
 					.by("no") // 기준
 					.descending(); // 정렬방식
