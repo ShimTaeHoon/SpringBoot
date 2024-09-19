@@ -103,4 +103,24 @@ public class BookRepositoryTest {
 		bookRepository.deleteById(1);
 	}
 	
+	@Test
+	public void searchBook() {
+		List<Book> list = bookRepository.get1("자바프로그래밍입문");
+		
+		System.out.println(list);
+	}
+	
+	@Test
+	public void priceAndNamGaram() {
+		List<Book> list = bookRepository.get2(30000, "남가람북스");
+		
+		System.out.println(list);
+	}
+	
+	@Test
+	public void hanbit() {
+		List<Book> list = bookRepository.get3("한빛출판사", "이지스퍼블리싱");
+		System.out.println(list);
+	}
+	
 }

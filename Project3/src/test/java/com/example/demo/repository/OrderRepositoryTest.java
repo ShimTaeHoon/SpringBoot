@@ -79,4 +79,19 @@ public class OrderRepositoryTest {
 		
 	}
 	
+	@Test
+	public void addressSearch() {
+		List<Order> list = orderRepository.get1("인천");
+		System.out.println(list);
+	}
+	
+	@Test
+	public void dateSearch() {
+		LocalDate localDate = LocalDate.of(2024,9,11);
+		List<Order> list = orderRepository.get2(localDate);
+		System.out.println(list);
+				
+	}
+	
+	
 }

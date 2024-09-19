@@ -122,5 +122,23 @@ public class GiftRepositoryTest {
 		giftRepository.deleteById(2);
 	}
 	
+	@Test
+	public void giftPriceSearch() {
+		List<Gift> list = giftRepository.get1(50000);
+		System.out.println(list);
+	}
+	
+	@Test
+	public void setSearch() {
+		List<Gift> list = giftRepository.get2("세트");
+		System.out.println(list);
+		
+	}
+	
+	@Test
+	public void typeSearch() {
+		List<Gift> list = giftRepository.get3(40000, "생활용품");
+		System.out.println(list);
+	}
 	
 }

@@ -101,4 +101,16 @@ public class MemberRepositoryTest {
 		memberRepository.deleteById("user1");
 	}
 	
+	@Test
+	public void memberSearch() {
+		List<Member> list = memberRepository.get1("user");
+		System.out.println(list);
+	}
+	
+	@Test
+	public void gradeSearch() {
+		List<Member> list = memberRepository.get2("관리자");
+		System.out.println(list);
+	}
+	
 }
